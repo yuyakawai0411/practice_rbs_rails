@@ -1,0 +1,2 @@
+# practice_rbs_rails
+railsアプリケーションに型を導入する練習用リポジトリ
