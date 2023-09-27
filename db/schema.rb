@@ -12,9 +12,19 @@
 
 ActiveRecord::Schema[7.0].define(version: 2023_09_24_120950) do
   create_table "todos", charset: "utf8mb4", force: :cascade do |t|
-    t.string "title"
+    t.string "title", null: false
+    t.integer "status_type", default: 10, null: false
+    t.bigint "user_id", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["user_id"], name: "index_todos_on_user_id"
+  end
+
+  create_table "users", charset: "utf8mb4", force: :cascade do |t|
+    t.string "name"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
 
+  add_foreign_key "todos", "users"
 end
