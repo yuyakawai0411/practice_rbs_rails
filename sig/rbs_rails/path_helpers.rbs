@@ -3,6 +3,10 @@ interface _RbsRailsPathHelpers
   def rails_info_properties_path: (*untyped) -> String
   def rails_info_routes_path: (*untyped) -> String
   def rails_info_path: (*untyped) -> String
+  def users_path: (*untyped) -> String
+  def new_user_path: (*untyped) -> String
+  def edit_user_path: (*untyped) -> String
+  def user_path: (*untyped) -> String
   def todos_path: (*untyped) -> String
   def new_todo_path: (*untyped) -> String
   def edit_todo_path: (*untyped) -> String
@@ -39,6 +43,10 @@ interface _RbsRailsPathHelpers
   def rails_info_properties_url: (*untyped) -> String
   def rails_info_routes_url: (*untyped) -> String
   def rails_info_url: (*untyped) -> String
+  def users_url: (*untyped) -> String
+  def new_user_url: (*untyped) -> String
+  def edit_user_url: (*untyped) -> String
+  def user_url: (*untyped) -> String
   def todos_url: (*untyped) -> String
   def new_todo_url: (*untyped) -> String
   def edit_todo_url: (*untyped) -> String

@@ -38,9 +38,9 @@ class Todo < ::ApplicationRecord
 
     def clear_id_change: () -> void
 
-    def title: () -> String?
+    def title: () -> String
 
-    def title=: (String?) -> String?
+    def title=: (String) -> String
 
     def title?: () -> bool
 
@@ -73,6 +73,78 @@ class Todo < ::ApplicationRecord
     def restore_title!: () -> void
 
     def clear_title_change: () -> void
+
+    def status_type: () -> String
+
+    def status_type=: (String) -> String
+
+    def status_type?: () -> bool
+
+    def status_type_changed?: () -> bool
+
+    def status_type_change: () -> [ String?, String? ]
+
+    def status_type_will_change!: () -> void
+
+    def status_type_was: () -> String?
+
+    def status_type_previously_changed?: () -> bool
+
+    def status_type_previous_change: () -> Array[String?]?
+
+    def status_type_previously_was: () -> String?
+
+    def status_type_before_last_save: () -> String?
+
+    def status_type_change_to_be_saved: () -> Array[String?]?
+
+    def status_type_in_database: () -> String?
+
+    def saved_change_to_status_type: () -> Array[String?]?
+
+    def saved_change_to_status_type?: () -> bool
+
+    def will_save_change_to_status_type?: () -> bool
+
+    def restore_status_type!: () -> void
+
+    def clear_status_type_change: () -> void
+
+    def user_id: () -> Integer
+
+    def user_id=: (Integer) -> Integer
+
+    def user_id?: () -> bool
+
+    def user_id_changed?: () -> bool
+
+    def user_id_change: () -> [ Integer?, Integer? ]
+
+    def user_id_will_change!: () -> void
+
+    def user_id_was: () -> Integer?
+
+    def user_id_previously_changed?: () -> bool
+
+    def user_id_previous_change: () -> Array[Integer?]?
+
+    def user_id_previously_was: () -> Integer?
+
+    def user_id_before_last_save: () -> Integer?
+
+    def user_id_change_to_be_saved: () -> Array[Integer?]?
+
+    def user_id_in_database: () -> Integer?
+
+    def saved_change_to_user_id: () -> Array[Integer?]?
+
+    def saved_change_to_user_id?: () -> bool
+
+    def will_save_change_to_user_id?: () -> bool
+
+    def restore_user_id!: () -> void
+
+    def clear_user_id_change: () -> void
 
     def created_at: () -> ActiveSupport::TimeWithZone
 
@@ -148,11 +220,32 @@ class Todo < ::ApplicationRecord
   end
   include GeneratedAttributeMethods
 
+  def user: () -> User?
+  def user=: (User?) -> User?
+  def reload_user: () -> User?
+  def build_user: (untyped) -> User
+  def create_user: (untyped) -> User
+  def create_user!: (untyped) -> User
   module GeneratedAssociationMethods
   end
   include GeneratedAssociationMethods
 
+  def status_type_do!: () -> bool
+  def status_type_do?: () -> bool
+  def status_type_doing!: () -> bool
+  def status_type_doing?: () -> bool
+  def status_type_done!: () -> bool
+  def status_type_done?: () -> bool
+  def self.status_type_do: () -> ActiveRecord_Relation
+  def self.status_type_doing: () -> ActiveRecord_Relation
+  def self.status_type_done: () -> ActiveRecord_Relation
+
   module GeneratedRelationMethods
+    def status_type_do: () -> ActiveRecord_Relation
+
+    def status_type_doing: () -> ActiveRecord_Relation
+
+    def status_type_done: () -> ActiveRecord_Relation
   end
 
   class ActiveRecord_Relation < ::ActiveRecord::Relation
