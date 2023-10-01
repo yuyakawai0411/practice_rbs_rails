@@ -1,4 +1,4 @@
-# D = Steep::Diagnostic
+D = Steep::Diagnostic
 #
 target :app do
   signature "sig"
@@ -16,7 +16,7 @@ target :app do
   # configure_code_diagnostics(D::Ruby.lenient)      # `lenient` diagnostics setting
   # configure_code_diagnostics(D::Ruby.silent)       # `silent` diagnostics setting
   # configure_code_diagnostics do |hash|             # You can setup everything yourself
-  #   hash[D::Ruby::NoMethod] = :information
+  #   hash[D::Ruby::UnknownConstant] = :information
   # end
 end
 
